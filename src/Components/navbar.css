@@ -1,0 +1,86 @@
+#main {
+    height: 100px;
+    width: 100%;
+    /* background: blue; */
+    z-index: 100;
+    position: absolute;
+    display: flex;
+    
+}
+
+.left-container {
+    height: 100%;
+    width: 40%;
+    /* background: yellow; */
+    display: flex;
+    align-items: center;
+}
+
+.left-container .left-container-child {
+    /* height: 100%; */
+    width: 100%;
+    /* background: red; */
+    margin-left: 40px;
+    color: white;
+}
+
+.right-container {
+    height: 100%;
+    width: 60%;
+    /* background: yellow; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.right-container .right-container-child {
+    width: 100%;
+    display: grid;
+    /* background: yellow; */
+    grid-template-columns: repeat(4, 0.15fr);
+    color: white;
+    justify-content: end;
+    /* gap: 10px 10px; */
+}
+
+.right-container .right-container-hamburger {
+    display: none;
+}
+
+#drawer {
+    height: 100%;
+    width: 150px;
+    background: black;
+    display: hidden;
+    flex-direction: column;
+}
+
+#drawer .drawer-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    color: white;
+}
+
+#drawer .drawer-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 10px;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 720px) {
+    .right-container .right-container-child {
+        display: none;
+        /* gap: 10px 10px; */
+    }
+    .right-container .right-container-hamburger {
+        color: white;
+        display: flex;
+        margin-right: 40px;
+    }
+}
